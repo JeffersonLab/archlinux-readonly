@@ -16,4 +16,4 @@ STATE_MOUNT=/var/lib/stateless/state
 # Options to use for peristent mount
 STATE_OPTIONS=
 # Set CLIENTSTATE
-CLIENTSTATE=129.57.29.80:/diskless/CentOS6/i386/snapshot
+CLIENTSTATE=daqfs:/raid/diskless/ArchLinux/armv7-devel/snapshot

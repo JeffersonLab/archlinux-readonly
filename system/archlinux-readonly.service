@@ -2,11 +2,13 @@
 Description=Configure read-only root support
 DefaultDependencies=no
 Conflicts=shutdown.target
-Before=shutdown.target emergency.service emergency.target systemd-tmpfiles-setup.service local-fs.target systemd-random-seed.service
+Before=shutdown.target emergency.service emergency.target local-fs.target systemd-tmpfiles-setup.service
 After=systemd-remount-fs.service
+StandardOutput=tty
+TTYPath=/dev/ttyPS0
 
 [Service]
-ExecStart=/lib/systemd/fedora-readonly
+ExecStart=/lib/systemd/archlinux-readonly
 Type=oneshot
 TimeoutSec=0
 RemainAfterExit=yes
